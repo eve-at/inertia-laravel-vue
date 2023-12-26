@@ -2,12 +2,12 @@
 
 Build a modert Laravel app using Inertia.js and Vue 3
 
-## Inertia.js installation - Server- & Client-side
-Server side <a href="https://inertiajs.com/server-side-setup">installation</a>
-
-Client side <a href="https://inertiajs.com/client-side-setup">installation</a> 
+## Inertia.js throught Breeze & Vue
+https://laravel.com/docs/10.x/starter-kits#breeze-and-inertia
 
 ## Installation
 ```
 composer install
+php artisan serve
+npm run dev
 ```

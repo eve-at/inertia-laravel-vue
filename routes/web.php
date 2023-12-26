@@ -18,6 +18,10 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
+        'name' => 'First Name 1',
+        'frameworks' => [
+            'Laravel', 'Inertia', 'Vue'
+        ],
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
