@@ -1,6 +1,8 @@
 import './bootstrap';
 import '../css/app.css';
 
+import NProgress from 'nprogress'
+import { router } from '@inertiajs/vue3'
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -19,5 +21,7 @@ createInertiaApp({
     },
     progress: {
         color: '#4B5563',
+        includeCSS: true,
+        showSpinner: true,
     },
 });
