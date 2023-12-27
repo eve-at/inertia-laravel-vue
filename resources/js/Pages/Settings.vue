@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <h1>Settings</h1>
+    <h1 class="text-4xl font bold">Settings</h1>
 
     <Nav />
 

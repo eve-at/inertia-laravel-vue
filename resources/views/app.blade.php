@@ -19,6 +19,8 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased flex">
-        @inertia
+        <section class="p-8">
+            @inertia
+        </section>
     </body>
 </html>
