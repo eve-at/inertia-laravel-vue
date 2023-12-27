@@ -1,10 +1,10 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 import Layout from '../Shared/Layout.vue';
+import Pagination from '../Shared/Pagination.vue';
 
 defineProps({
-    time: String,
-    users: Array
+    users: Object
 })
 </script>
 
@@ -14,7 +14,15 @@ defineProps({
     </Head>
     <Layout title="Users">
         <ul>
-            <li v-for="user in users" :key="user.id" v-text="user.name"></li>
+            <li v-for="user in users.data" :key="user.id">
+                <div>{{ user.name }}</div>
+                <Link :href="`/users/${user.id}/edit`">Edit</Link>
+            </li>
         </ul>
+
+        <Pagination 
+            class="mt-6"
+            :links="users.links" 
+        />
     </Layout>
 </template>
