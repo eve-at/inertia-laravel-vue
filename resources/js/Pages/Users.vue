@@ -3,7 +3,8 @@ import { Head, Link } from '@inertiajs/vue3';
 import Layout from '../Shared/Layout.vue';
 
 defineProps({
-    time: String
+    time: String,
+    users: Array
 })
 </script>
 
@@ -12,16 +13,8 @@ defineProps({
         <title>Users</title>
     </Head>
     <Layout title="Users">
-        <div style="margin-top: 800px;">
-            <p>The current time is {{ time  }}</p>
-        </div>
-
-        <Link 
-            href="/users" 
-            class="text-blue-500 hover:underline"
-            preserve-scroll
-        >
-            Refresh
-        </Link>
+        <ul>
+            <li v-for="user in users" :key="user.id" v-text="user.name"></li>
+        </ul>
     </Layout>
 </template>
