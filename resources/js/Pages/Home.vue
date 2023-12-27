@@ -2,18 +2,13 @@
 import Layout from '../Shared/Layout.vue'
 
 export default {
-    props: {
-        'username': String
-    },
+    props: {},
     components: { Layout }
 };
 </script>
 
 <template>
-    <Layout 
-        :username="username"
-        title="Home"
-    >
+    <Layout title="Home">
         Hello there
     </Layout>
 </template>

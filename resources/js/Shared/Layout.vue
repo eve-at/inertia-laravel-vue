@@ -3,10 +3,14 @@ import Nav from './Nav.vue';
 
 export default {
     props: {
-        'title': String,
-        'username': String
+        'title': String
     },
-    components: { Nav }
+    components: { Nav },
+    computed: {
+        username() {
+            return this.$page.props.auth.username;
+        }
+    }
 };
 </script>
 
@@ -16,7 +20,7 @@ export default {
             <div class="flex items-center">
                 <h1 class="text-2xl font">{{ title }}</h1>
                 <p class="text-sm ml-4">
-                    Welcome back, {{ username }}
+                    Welcome, {{ username }}!
                 </p>
             </div>
             <Nav />
