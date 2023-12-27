@@ -1,5 +1,5 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import Layout from '../Shared/Layout.vue';
 
 defineProps({
@@ -8,6 +8,9 @@ defineProps({
 </script>
 
 <template>
+    <Head>
+        <title>Users</title>
+    </Head>
     <Layout title="Users">
         <div style="margin-top: 800px;">
             <p>The current time is {{ time  }}</p>

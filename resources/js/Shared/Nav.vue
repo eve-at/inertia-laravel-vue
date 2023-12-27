@@ -9,7 +9,7 @@ export default {
 
 <template>
     <nav class="ml-6">
-        <ul class="flex space-x-4 list-inside">
+        <ul class="flex space-x-4">
             <li>
                 <NavLink href="/" :active="$page.component === 'Home'">
                     Home
@@ -25,13 +25,13 @@ export default {
                     Settings
                 </NavLink>
             </li>
-            <li>
+            <!-- <li>
                 <Link 
                     class="text-blue-500 hover:underline" href="/logout" method="post" as="button"
                 >
                     Log Out
                 </Link>
-            </li>
+            </li> -->
         </ul>
     </nav>
 </template>
